@@ -20,9 +20,9 @@ class TagsImport implements ToCollection, WithHeadingRow,WithValidation
                 'name'=>$row['name'],
                 'slug'=>Str::slug($row['slug'],'-', null),
                 'description'=>$row['description'],
-                'seo_title'=>$row['seo_title'].' في الكويت على مدار 24 ساعة',
+                'seo_title'=>$row['seo_title'].' | فني ستلايت | اشتراك اي بي تي في على مدار 24 ساعة',
                 'seo_keyword'=>$row['seo_keyword'],
-                'seo_description'=> ' نقدم لك افضل خدمة '.$row['seo_description']. ' في جميع مدن الكويت على مدار 24 ساعة في اليوم اتصل لنصل اليك باسرع وقت',
+                'seo_description'=> ' نقدم لك افضل خدمة '.$row['seo_description']. ' في جميع مدن الكويت على مدار 24 ساعة في اليوم فني ستلايت | اشتراك اي بي تي في | تجديد اشتراكات اي بي تي في',
                 'active'=>'1',
 
             ];

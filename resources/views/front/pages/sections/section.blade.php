@@ -35,8 +35,6 @@
                                 
                             </div>
                             <br>
-
-                            {{-- <h3 class="section-second-title">تبديل بطاريات الكويت لجميع السيارات:</h3> --}}
                             <p>{{$section ->description}} </p>
                             <a href="{{get_default_social_link_facebook()}}" rel="nofollow" target="_blank">شاهد ايضا: للمزيد حول {{get_default_title()}} اضغط هنا</a> 
 

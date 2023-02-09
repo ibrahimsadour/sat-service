@@ -106,7 +106,6 @@ class SectionsController extends Controller
 
     public function update($id, SectionsRequest $request)
     {
-        //validation => CarsRequest
 
         try {
             //find Car

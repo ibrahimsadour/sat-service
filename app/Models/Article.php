@@ -17,7 +17,7 @@ class Article extends Model
     protected $table = 'articles';
 
     protected $fillable = [
-        'id','section_id','car_id','city_id','service_id','description','tags', 'name','slug','photo','active','seo_title','seo_keyword','seo_description','created_at','updated_at'
+        'id','section_id','car_id','service_id','description','tags', 'name','slug','photo','active','seo_title','seo_keyword','seo_description','created_at','updated_at'
     ];
     protected $hidden = ['pivot'];
     public $timestamps = true;
@@ -30,7 +30,7 @@ class Article extends Model
 
     public function scopeSelection($query)
     {
-        return $query->select('id','section_id','car_id','city_id','service_id','description', 'name','slug','photo','active','seo_title','seo_keyword','seo_description','created_at','updated_at');
+        return $query->select('id','section_id','city_id','service_id','description', 'name','slug','photo','active','seo_title','seo_keyword','seo_description','created_at','updated_at');
     }
 
     public function getActive()
@@ -48,12 +48,6 @@ class Article extends Model
         return ($val !== null) ? asset('assets/' . $val) : "";
 
     }
-    ################## Begin cars Relation  #####################
-    //   Get all cars
-    public function car(){
-        return $this->belongsTo(Car::class,'car_id','id');
-    }
-    ################## End cars Relation    #####################
 
     ################## Begin cities Relation  #####################
     //   Get all cities

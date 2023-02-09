@@ -26,7 +26,6 @@ class SitemapController extends Controller
             ->add(Url::create('/contact-us'))
             ->add(Url::create('/tags'))
             ->add(Url::create('/cities'))
-            ->add(Url::create('/cars'))
             ->add(Url::create('/articles'))
             ->writeToFile('sitemap_index.xml');
     }
@@ -66,25 +65,6 @@ class SitemapController extends Controller
             $sitemap ->add(Url::create('tags/'.$tag->slug));
         }
         return  $sitemap->writeToFile(public_path('sitemap_tags.xml'));
-    }
-    public function sitemap_cars(){
-        $cars = Car::Active()->get();
-        $sitemap = Sitemap::create();
-        foreach ($cars as $car) {
-            $sitemap ->add(Url::create('cars/'.$car->slug));
-        }
-        return  $sitemap->writeToFile(public_path('sitemap_cars.xml'));
-    }
-    public function sitemap_car_tags(){
-        $cars = Car::with('tags')->get();
-
-        $sitemap = Sitemap::create();
-        foreach ($cars as $car) {
-            foreach($car->tags as $tag){
-                $sitemap ->add(Url::create('cars/'.$tag->slug.'/'.$car->slug));
-            }
-        }
-        return  $sitemap->writeToFile(public_path('sitemap_car_tags.xml'));
     }
     public function sitemap_services(){
         $services = Service::all();

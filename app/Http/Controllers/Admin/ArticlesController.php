@@ -34,7 +34,7 @@ class ArticlesController extends Controller
             ->add(Article::all());
     }
 
-    //show all cars
+    //show all articles
     public function index()
 
     {
@@ -50,7 +50,6 @@ class ArticlesController extends Controller
     {
         $data = [];
         $data['sections'] = Section::active()->select('id','name')->get();
-        $data['cars'] = Car::active()->select('id','name')->get();
         $data['cities'] = City::active()->select('id','name')->get();
         $data['services'] = Service::active()->select('id','name')->get();
         $data['tags'] = Tag::select('id','name')->get();
@@ -92,15 +91,8 @@ class ArticlesController extends Controller
         if($request->section_id != 0 ){
             $section_id = $request->section_id;
         }else{
-            $car_id = Null;
+            $section_id = Null;
         }
-        // car_id
-        if($request->car_id != 0 ){
-            $car_id = $request->car_id;
-        }else{
-            $car_id = Null;
-        }
-
         // city_id
         if($request->city_id != 0 ){
             $city_id = $request->city_id;
@@ -126,7 +118,6 @@ class ArticlesController extends Controller
                 'seo_keyword' =>$request->seo_keyword,
                 'seo_description' =>$request->seo_description,
                 'section_id' => $section_id,
-                'car_id' => $car_id,
                 'city_id' => $city_id,
                 'service_id' => $service_id
             ]);
@@ -150,9 +141,6 @@ class ArticlesController extends Controller
 //        try {
             $article = Article::select()->Active()->find($id);
 
-            $articleCars = $article->car()->get();
-            $cars= Car::active()->select('id','name')->get();
-
             $articleCities =  $article->city()->get();
             $cities = City::active()->select('id','name')->get();
 
@@ -165,7 +153,7 @@ class ArticlesController extends Controller
             if (!$article) {
                 return redirect()->route('admin.articles')->with(['error' => 'هذه المقالة غير موجودة ']);
             }
-            return view('admin.articles.edit', compact('article','cars','cities','services','tags','articleTags','articleCars','articleCities','articleServices'));
+            return view('admin.articles.edit', compact('article','cities','services','tags','articleTags','articleCities','articleServices'));
 
 //        } catch (\Exception $ex) {
 //            return redirect()->route('admin.articles')->with(['error' => 'حدث خطا ما برجاء المحاوله لاحقا']);
@@ -181,7 +169,7 @@ class ArticlesController extends Controller
             //find Article and check of the exists or not
             $article = Article::find($request->id);
             if (!$article) {
-                return redirect()->route('admin.cars.edit', $request->id)->with(['error' => 'هذه الماركة غير موجودة']);
+                return redirect()->route('admin.articles.edit', $request->id)->with(['error' => 'هذه المقالة غير موجودة']);
             }
 
             if (!$request->has('active'))
@@ -276,7 +264,7 @@ class ArticlesController extends Controller
             return redirect()->route('admin.articles')->with(['success' => ' تم تغيير الحالة بنجاح ']);
 
         } catch (\Exception $ex) {
-            return redirect()->route('admin.cars')->with(['error' => 'حدث خطا ما برجاء المحاوله لاحقا']);
+            return redirect()->route('admin.articles')->with(['error' => 'حدث خطا ما برجاء المحاوله لاحقا']);
         }
     }
 

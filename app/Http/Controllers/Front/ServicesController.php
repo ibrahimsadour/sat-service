@@ -19,11 +19,10 @@ class ServicesController extends Controller
         // Group query to show some items
         $sections = selectActiveSctions();
         $articles = select5ActiveArticles();
-        $cars = select3ActiveCars();
         $first_articles = selectFirst_Articles();
         $last_articles = selectLast_Articles();
         $tags = select10ActiveTags();
-        return view('front.pages.services.services_group', compact('services','sections','articles','tags','first_articles','last_articles','cars'));
+        return view('front.pages.services.services_group', compact('services','sections','articles','tags','first_articles','last_articles'));
     }
 
     //show one service
@@ -37,11 +36,10 @@ class ServicesController extends Controller
         // Group query to show some items
         $sections = selectActiveSctions();
         $articles = select5ActiveArticles();
-        $cars = select3ActiveCars();
         $first_articles = selectFirst_Articles();
         $last_articles = selectLast_Articles();
         $tags = select10ActiveTags();
-        return view('front.pages.services.service', compact('service','sections','articles','tags','first_articles','last_articles','cars'));
+        return view('front.pages.services.service', compact('service','sections','articles','tags','first_articles','last_articles'));
 
     }
 }

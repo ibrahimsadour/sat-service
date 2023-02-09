@@ -1,8 +1,8 @@
 @extends('front.layouts.master')
 @if(isset($city))
-    @section('title',$slugTag.' '.$city->name.' في مدينة الكويت على مدار 24 ساعة في اليوم ')
+    @section('title',$slugTag.' في '.$city->name.' فني ستلايت و الاشتراك بقنوات بي ان سبورت  في  '.$city ->name)
     @section('seo_keyword',$slugTag.' '.$city->name)
-    @section('seo_description',' نقدم لك افضل خدمة '.$slugTag.' '.$city->name. ' في جميع مدن الكويت على مدار 24 ساعة في اليوم اتصل لنصل  ')
+    @section('seo_description',$slugTag.' '.$city ->name.' - '.' رقم فني ستلايت في مدينة '.$city ->name.' فني ستلايت هندي'.' - '.'اشتراكات اي بي تي في  بمدينة '.$city ->name.' - '.'الاشتراك بقنوات بي ان سبورت')
     @section('seo_image',asset('assets/images/pages/default_seo_image.webp'))
     @section('seo_url', URL::route('city.index',str_replace(' ', '-', $slugTag).'/'.$city ->slug))
 @endif

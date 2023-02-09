@@ -99,27 +99,6 @@
                                                             @enderror
                                                         </div>
                                                     </div>
-                                                    <!-- car_id -->
-                                                    <div class="col-md-2">
-                                                        <div class="form-group">
-                                                            <label for="projectinput1"> اختر ماركة السيارة
-                                                            </label>
-                                                            <select name="car_id" class="select2 form-control" value="{{old('car_id')}}" >
-                                                                <optgroup label="من فضلك أختر ماركة السيارة ">
-                                                                    @if($cars  -> count() > 0)
-                                                                        @foreach($cars as $car)
-                                                                            <option value="{{$car -> id}}">{{$car -> name}}</option>
-                                                                        @endforeach
-                                                                    @else
-                                                                        <option value="0">لا يوجد اي سيارات مضافة</option>
-                                                                    @endif
-                                                                </optgroup>
-                                                            </select>
-                                                            @error('car_id')
-                                                            <span class="text-danger"> {{$message}}</span>
-                                                            @enderror
-                                                        </div>
-                                                    </div>
                                                     <!-- city_id -->
                                                     <div class="col-md-2">
                                                         <div class="form-group">

@@ -14,17 +14,17 @@
                                       
                                         <li class="widget-single-post-item">
                                             <a href="{{route('cities.index')}}">
-                                                <h3>خدمات لجميع مدن الكويت</h3>
+                                                <h3>فني ستلايت لجميع مدن الكويت</h3>
                                             </a>
                                         </li>
                                         <li class="widget-single-post-item">
-                                            <a href="{{route('cars.index')}}">
-                                                <h3>خدمات سيارات الكويت</h3>
+                                            <a href="{{route('services.index')}}">
+                                                <h3>خدمات ستلايت الكويت</h3>
                                             </a>
                                         </li>
                                         <li class="widget-single-post-item">
                                             <a href="{{route('tags.index')}}">
-                                                <h3>بنشر متنقل الكويت</h3>
+                                                <h3>تجديد اشتراكات  IPTV </h3>
                                             </a>
                                         </li>
 

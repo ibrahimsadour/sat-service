@@ -22,13 +22,12 @@ class WebsitePagesController extends Controller
         // Group query to show some items
         $sections = selectActiveSctions();
         $articles = select5ActiveArticles();
-        $cars = select3ActiveCars();
         $first_articles = selectFirst_Articles();
         $last_articles = selectLast_Articles();
         $tags = select10ActiveTags();
                 
         $home_page = HomePage::first();
-        return view('front.pages.home', compact(['sections','articles','tags','first_articles','last_articles','home_page','cars']));
+        return view('front.pages.home', compact(['sections','articles','tags','first_articles','last_articles','home_page']));
     }
 
     public function about_page (){
@@ -37,13 +36,12 @@ class WebsitePagesController extends Controller
         // Group query to show some items
         $sections = selectActiveSctions();
         $articles = select5ActiveArticles();
-        $cars = select3ActiveCars();
         $first_articles = selectFirst_Articles();
         $last_articles = selectLast_Articles();
         $tags = select10ActiveTags();
 
 
-        return view('front.pages.about.index', compact('about','sections','articles','tags','first_articles','last_articles','cars'));
+        return view('front.pages.about.index', compact('about','sections','articles','tags','first_articles','last_articles'));
     }
 
     public function privacy_policy_page (){
@@ -52,12 +50,11 @@ class WebsitePagesController extends Controller
         // Group query to show some items
         $sections = selectActiveSctions();
         $articles = select5ActiveArticles();
-        $cars = select3ActiveCars();
         $first_articles = selectFirst_Articles();
         $last_articles = selectLast_Articles();
         $tags = select10ActiveTags();
 
-        return view('front.pages.privacy-policy.index', compact('privacy_policy_page','sections','articles','tags','first_articles','last_articles','cars'));
+        return view('front.pages.privacy-policy.index', compact('privacy_policy_page','sections','articles','tags','first_articles','last_articles'));
     }
 
     public function terms_condition_page (){
@@ -66,22 +63,20 @@ class WebsitePagesController extends Controller
         // Group query to show some items
         $sections = selectActiveSctions();
         $articles = select5ActiveArticles();
-        $cars = select3ActiveCars();
         $first_articles = selectFirst_Articles();
         $last_articles = selectLast_Articles();
         $tags = select10ActiveTags();
 
-        return view('front.pages.terms-condition.index', compact('terms_condition_page','sections','articles','tags','first_articles','last_articles','cars'));
+        return view('front.pages.terms-condition.index', compact('terms_condition_page','sections','articles','tags','first_articles','last_articles'));
     }
     public function contact_us_page (){
         // Group query to show some items
         $sections = selectActiveSctions();
         $articles = select5ActiveArticles();
-        $cars = select3ActiveCars();
         $first_articles = selectFirst_Articles();
         $last_articles = selectLast_Articles();
         $tags = select10ActiveTags();
-        return view('front.pages.contact-us.index', compact('sections','articles','tags','first_articles','last_articles','cars'));
+        return view('front.pages.contact-us.index', compact('sections','articles','tags','first_articles','last_articles'));
     }
 
 
@@ -89,7 +84,6 @@ class WebsitePagesController extends Controller
         // Group query to show some items
         $sections = selectActiveSctions();
         $articles = select5ActiveArticles();
-        $cars = select3ActiveCars();
         $first_articles = selectFirst_Articles();
         $last_articles = selectLast_Articles();
         $tags = select10ActiveTags();

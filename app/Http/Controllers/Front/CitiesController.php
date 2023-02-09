@@ -20,7 +20,6 @@ class CitiesController extends Controller
         // Group query to show some items
         $sections = selectActiveSctions();
         $articles = select5ActiveArticles();
-        $cars = select3ActiveCars();
         $first_articles = selectFirst_Articles();
         $last_articles = selectLast_Articles();
         $tags = select10ActiveTags();
@@ -34,11 +33,10 @@ class CitiesController extends Controller
         // Group query to show some items
         $sections = selectActiveSctions();
         $articles = select5ActiveArticles();
-        $cars = select3ActiveCars();
         $first_articles = selectFirst_Articles();
         $last_articles = selectLast_Articles();
         $tags = select10ActiveTags();
-        return view('front.pages.cities.city', compact('city','sections','articles','tags','first_articles','last_articles','cars','cityTags'));
+        return view('front.pages.cities.city', compact('city','sections','articles','tags','first_articles','last_articles','cityTags'));
 
     }
     //show one city with his tag
@@ -52,7 +50,6 @@ class CitiesController extends Controller
         // Group query to show some items
         $sections = selectActiveSctions();
         $articles = select5ActiveArticles();
-        $cars = select3ActiveCars();
         $first_articles = selectFirst_Articles();
         $last_articles = selectLast_Articles();
         $tags = select10ActiveTags();
@@ -60,7 +57,7 @@ class CitiesController extends Controller
         if (!$city) {
         return redirect()->route('404.index');
         }
-        return view('front.pages.cities.city-with-tag', compact('city','slugTag','sections','articles','tags','first_articles','last_articles','cars'));
+        return view('front.pages.cities.city-with-tag', compact('city','slugTag','sections','articles','tags','first_articles','last_articles'));
 
 
     }

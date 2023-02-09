@@ -88,13 +88,6 @@ th {
                                 <td>الاقسام</td>
                             </tr>
                             <tr>
-                                <td><a href="{{ url('sitemap_cars.xml')}}">{{ url('sitemap_cars.xml')}}</a></td>
-                                <td>السيارات</td>
-                            </tr>                            <tr>
-                                <td><a href="{{ url('sitemap_car_tags.xml')}}">{{ url('sitemap_car_tags.xml')}}</a></td>
-                                <td>السيارت مع العلامات الدلالية</td>
-                            </tr>
-                            <tr>
                                 <td><a href="{{ url('sitemap_cities.xml')}}">{{ url('sitemap_cities.xml')}}</a></td>
                                 <td>المدن</td>
                             </tr> <tr>

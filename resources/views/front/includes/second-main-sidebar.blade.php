@@ -31,9 +31,9 @@
                 <div class="the-subtitle">التصنيفات<span class="widget-title-icon"></span></div>
             </div>
             <ul>
-                @isset($sections)
-                    @foreach($sections as $section)
-                        <li class=" cat-counter "><a href="{{url('sections/'.$section ->slug)}}" title="{{$section ->name}}">  {{ $section -> name}}</a> <span>1</span> </li>
+                @isset($tags)
+                    @foreach($tags as $tag)
+                        <li class=" cat-counter "><a href="{{url('tags/'.$tag ->slug)}}" title="{{$tag ->name}}">  {{ $tag ->name}}</a> <span>1</span> </li>
                     @endforeach
                 @endisset
             </ul>

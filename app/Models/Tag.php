@@ -41,15 +41,7 @@ class Tag extends Model
     public function articles(){
             return $this->belongsToMany(Article::class, 'article_tag','article_id','tag_id');
     }
-
-    //   Get cars of the one tag
-    public function cars(){
-        return $this->belongsToMany(Car::class, 'car_tag','tag_id','car_id');
-    }
-    //   Get sub cars of the one tag
-    public function sub_cars(){
-        return $this->belongsToMany(Car::class, 'sub_car_tag','tag_id','sub_car_id');
-    }
+    
     //  Get cities of the one tag
     public function cities(){
         return $this->belongsToMany(City::class, 'city_tag','tag_id','city_id');

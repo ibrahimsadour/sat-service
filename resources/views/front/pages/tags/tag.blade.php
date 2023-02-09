@@ -1,6 +1,6 @@
 @extends('front.layouts.master')
 @if(isset($tag))
-    @section('title',$tag ->name.' '.'في'.' '.get_default_country())
+    @section('title',$tag ->seo_title.' '.'في'.' '.get_default_country())
     @section('seo_keyword',$tag ->seo_keyword)
     @section('seo_description',$tag ->seo_description)
     @section('seo_url', URL::route('tag.index',$tag ->slug) )

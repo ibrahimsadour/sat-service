@@ -1,6 +1,5 @@
 <?php
 use App\Http\Controllers\Admin\DashboardController;
-use App\Http\Controllers\Admin\CarsController;
 use App\Http\Controllers\Admin\CitiesController;
 use App\Http\Controllers\Admin\ServicesController;
 use App\Http\Controllers\Admin\ArticlesController;
@@ -41,42 +40,6 @@ Auth::routes();
 
 Route::group( ['prefix' => 'admin', 'middleware' => 'auth'],function() {
     Route::get('/dashboard',[DashboardController::class ,'show_dashboard']) -> name('admin.dashboard');
-
-    ############################# Begin Cars Route ###############################
-    Route::group(['prefix' => 'cars'], function () {
-        Route::get('/',[CarsController::class ,'index']) -> name('admin.cars');
-        Route::get('create',[CarsController::class ,'create']) -> name('admin.cars.create');
-        Route::post('store',[CarsController::class ,'store']) -> name('admin.cars.store');
-        Route::get('edit/{id}',[CarsController::class ,'edit']) -> name('admin.cars.edit');
-        Route::post('update/{id}',[CarsController::class ,'update']) -> name('admin.cars.update');
-        Route::get('delete/{id}',[CarsController::class ,'destroy']) -> name('admin.cars.delete');
-        //change Status the category and the vendors
-        Route::get('changeStatus/{id}',[CarsController::class ,'changeStatus']) -> name('admin.cars.status');
-        // insert_all_tags_to_one_car
-        Route::post('insert',[CarsController::class ,'insert_all_tags_to_one_car']) -> name('insert-all-tags-to-one-car');
-        //delete_all_tags_of_one_car 
-        Route::get  ('delete-tags/{id}',[CarsController::class ,'delete_all_tags_of_one_car']) -> name('delete-all-tags-of-one-car');
-    });
-    ############################# End Cars Route ################################
-
-
-    ###################### Brgin Sub Cars Route ###############################
-        Route::group(['prefix' => 'sub-cars'], function () {
-            Route::get('{id}',[SubCarController::class ,'index']) -> name('admin.sub-cars');
-            Route::get('/{id}/create',[SubCarController::class ,'create']) -> name('admin.sub-cars.create');
-            Route::post('store',[SubCarController::class ,'store']) -> name('admin.sub-cars.store');
-            Route::get('/edit/{id}',[SubCarController::class ,'edit']) -> name('admin.sub-cars.edit');
-            Route::post('update/{id}',[SubCarController::class ,'update']) -> name('admin.sub-cars.update');
-            Route::get('delete/{id}',[SubCarController::class ,'destroy']) -> name('admin.sub-cars.delete');
-            //change Status the category and the vendors
-            Route::get('changeStatus/{id}',[SubCarController::class ,'changeStatus']) -> name('admin.sub-cars.status');
-            // insert_all_tags_to_ ( one_sub car collection ) -> one car
-            Route::post('insert',[SubCarController::class ,'insert_all_tags_to_sub_car_collection']) -> name('insert-all-tags-to-sub-car-collection');
-            // //delete_all_tags_of_one_car 
-            Route::get  ('delete-tags/{id}',[SubCarController::class ,'delete_all_tags_of_one_sub_car']) -> name('delete-all-tags-of-one-sub-car');
-        });
-    ###################### End Sub Cars Route #################################
-
 
     ############################# Begin Cities Route ###############################
     Route::group(['prefix' => 'cities'], function () {
@@ -220,8 +183,9 @@ Route::group( ['prefix' => 'admin', 'middleware' => 'auth'],function() {
         Route::get('changeStatus/{id}',[HomePageController::class ,'changeStatus']) -> name('admin.home-page.status');
         
     });
-    ############################# End Cars Route ################################
-        ############################# Begin home-page Route ###############################
+    ############################# End home-page Route ################################
+
+    ############################# Begin google Route ###############################
         Route::group(['prefix' => 'google'], function () {
             Route::get('/',[GoolgeController::class ,'index']) -> name('admin.google');
             Route::get('create',[GoolgeController::class ,'create']) -> name('admin.google.create');
@@ -232,7 +196,8 @@ Route::group( ['prefix' => 'admin', 'middleware' => 'auth'],function() {
             Route::get('changeStatus/{id}',[GoolgeController::class ,'changeStatus']) -> name('admin.google.status');
 
         });
-        ############################# End Cars Route ################################
+    ############################# End google Route ################################
+    
     ############################# Begin cache Route ###############################
     Route::get('cache/application',[CacheController::class ,'application_cache']) -> name('admin.cache.application');
     ############################# End cache Route ###############################

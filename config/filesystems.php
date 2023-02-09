@@ -41,13 +41,6 @@ return [
             'url' => env('APP_URL').'/storage',
             'visibility' => 'public',
         ],
-        // Hier bij wordt alle foto van de cars (الاقسام) opgeslaagd
-        'cars' => [
-            'driver' => 'local',
-            'root' => public_path() . '/assets/images/cars/',
-            'url' => env('APP_URL') . '/public',
-            'visibility' => 'public',
-        ],
         // Hier bij wordt alle foto van de articles (التجار) opgeslaagd
         'articles' => [
             'driver' => 'local',

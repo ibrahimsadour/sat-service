@@ -20,7 +20,6 @@ class PagesController extends Controller
     }
 
 
-    //show all cars
     public function index()
 
     {
@@ -70,11 +69,11 @@ class PagesController extends Controller
             }
             $home_page->save();
             DB::commit();
-            return redirect()->route('admin.cars')->with(['success' => 'تمت الاضافة بنجاح']);
+            return redirect()->route('admin.home-page')->with(['success' => 'تمت الاضافة بنجاح']);
         }
         catch(Exception $e){
             DB::rollback();
-            return redirect()->route('admin.cars')->with(['error' => 'حدث خطا ما برجاء المحاوله لاحقا']);
+            return redirect()->route('admin.home-page')->with(['error' => 'حدث خطا ما برجاء المحاوله لاحقا']);
         }
 
     }

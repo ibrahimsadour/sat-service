@@ -60,7 +60,6 @@
                                                 <th>الأسم</th>
                                                 <th>اسم الرابط</th>
                                                 <th> الوصف</th>
-                                                <th> السيارات</th>
                                                 <th>الحالة</th>
                                                 <th>التاريخ</th>
                                                 <th>الإجرءات -- <a href="{{route("admin.tags.destroyAll")}}" class="btn btn-outline-danger">حذف الكل {{App\Models\Tag::count()}}</a></th>
@@ -74,7 +73,6 @@
                                                         <td>{{$tag -> name}}</td>
                                                         <td>{{$tag -> slug}}</td>
                                                         <td>{{ Str::limit($tag -> description, 45) }}</td>
-                                                        <td>{{$tag->cars->count()}}</td>
                                                         <td>
                                                             @if($tag -> getActive() === "active" || $tag -> getActive() === "مفعل")
                                                                 <b class="success">{{$tag -> getActive() }}

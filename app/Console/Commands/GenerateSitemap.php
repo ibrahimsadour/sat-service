@@ -40,22 +40,8 @@ class GenerateSitemap extends Command
         ->add(Url::create('/404'))
         ->add(Url::create('/tags'))
         ->add(Url::create('/cities'))
-        ->add(Url::create('/cars'))
         ->add(Url::create('/articles'))
         ->writeToFile(public_path('sitemap_index.xml'));
 
     }
 }
-
-// code to crate new sitemap for all cars with her tags 
-
-// $cars = Car::with('tags')->get();
-// $sitemap =  SitemapGenerator::create(env('APP_URL'))->getSitemap();
-// foreach ($cars as $car) {
-//     foreach($car->tags as $tag){
-//         $sitemap->add(Url::create('cars/'.$tag->slug.'/'.$car->slug))->writeToFile(public_path('sitemap_car_tags.xml'));
-        
-//     }
-    
-// }
- 

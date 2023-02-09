@@ -19,12 +19,11 @@ class TagsController extends Controller
         // Group query to show some items
         $sections = selectActiveSctions();
         $articles = select5ActiveArticles();
-        $cars = select3ActiveCars();
         $first_articles = selectFirst_Articles();
         $last_articles = selectLast_Articles();
         $tags = select10ActiveTags();
 
-        return view('front.pages.tags.tags_group', compact('tags','show_all_tags','sections','articles','first_articles','last_articles','cars'));
+        return view('front.pages.tags.tags_group', compact('tags','show_all_tags','sections','articles','first_articles','last_articles'));
     }
     //show one tag
     public function show_one_tag($slug)
@@ -38,19 +37,12 @@ class TagsController extends Controller
         // Group query to show some items
         $sections = selectActiveSctions();
         $articles = select5ActiveArticles();
-        $cars = select3ActiveCars();
         $first_articles = selectFirst_Articles();
         $last_articles = selectLast_Articles();
         $tags = select10ActiveTags();
-        return view('front.pages.tags.tag', compact('tag','sections','articles','tags','first_articles','last_articles','cars'));
-
-}
-    //show one tag
-    public function show_tag_cars($id)
-    {
-        $tag = Tag::with('cars')->find($id);
-        return $tag;
+        return view('front.pages.tags.tag', compact('tag','sections','articles','tags','first_articles','last_articles'));
 
     }
+  
 
 }
