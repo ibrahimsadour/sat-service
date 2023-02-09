@@ -1,0 +1,13 @@
+User-agent: *
+Disallow: /admin/
+
+
+Sitemap:https://auto.kw-service.net/sitemap_index.xml
+Sitemap:https://auto.kw-service.net/sitemap_tags.xml
+Sitemap:https://auto.kw-service.net/sitemap_cars.xml
+Sitemap:https://auto.kw-service.net/sitemap_car_tags.xml
+Sitemap:https://auto.kw-service.net/sitemap_cities.xml
+Sitemap:https://auto.kw-service.net/sitemap_city_tags.xml
+Sitemap:https://auto.kw-service.net/sitemap_services.xml
+Sitemap:https://auto.kw-service.net/sitemap_sections.xml
+Sitemap:https://auto.kw-service.net/sitemap_articles.xml
