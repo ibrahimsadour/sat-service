@@ -5,7 +5,6 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\ArticlesRequest;
 use App\Models\Article;
-use App\Models\Car;
 use App\Models\City;
 use App\Models\Section;
 use App\Models\Service;
@@ -62,7 +61,7 @@ class ArticlesController extends Controller
     public function store(ArticlesRequest $request)
 
     {
-//    return $request->tags;
+//    return $request;
         DB::beginTransaction();
         //Deze gemaakt om te checken als het goed gaat met insert proces:
         ### try {

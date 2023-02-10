@@ -2,7 +2,6 @@
 
 namespace App\Console\Commands;
 
-use App\Models\Car;
 use Illuminate\Console\Command;
 use Spatie\Sitemap\SitemapGenerator;
 use Spatie\Sitemap\Tags\Url;

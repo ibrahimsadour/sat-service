@@ -1,7 +1,6 @@
 <?php
 
 namespace App\Models;
-use App\Models\Car;
 use App\Models\City;
 use App\Models\Service;
 use App\Models\Tag;
@@ -17,7 +16,7 @@ class Article extends Model
     protected $table = 'articles';
 
     protected $fillable = [
-        'id','section_id','car_id','service_id','description','tags', 'name','slug','photo','active','seo_title','seo_keyword','seo_description','created_at','updated_at'
+        'id','section_id','city_id','service_id','description','tags', 'name','slug','photo','active','seo_title','seo_keyword','seo_description','created_at','updated_at'
     ];
     protected $hidden = ['pivot'];
     public $timestamps = true;

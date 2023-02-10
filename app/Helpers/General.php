@@ -6,7 +6,6 @@
 ##################################################################################
 
 use App\Models\Article;
-use App\Models\Car;
 use App\Models\Section;
 use App\Models\Tag;
 use Illuminate\Support\Facades\Config;
