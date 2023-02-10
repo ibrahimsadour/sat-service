@@ -12,7 +12,7 @@
                 />
             </a>
             <div class="styles_wrapper_2__YjPsx">
-            <a href="{{'tel:'.get_default_phone_number()}}" class="button">أتصل الان</a>
+            <a href="{{'tel:'.get_default_phone_number()}}" title="اتصل بنا" class="button">أتصل الان</a>
             </div>
         </div>
     </div>

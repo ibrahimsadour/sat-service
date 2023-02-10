@@ -13,17 +13,17 @@
                                     <ul class="posts-list-items widget-posts-wrapper">
                                       
                                         <li class="widget-single-post-item">
-                                            <a href="{{route('cities.index')}}">
+                                            <a href="{{route('cities.index')}}" title="فني ستلايت لجميع مدن الكويت">
                                                 <h3>فني ستلايت لجميع مدن الكويت</h3>
                                             </a>
                                         </li>
                                         <li class="widget-single-post-item">
-                                            <a href="{{route('services.index')}}">
+                                            <a href="{{route('services.index')}}" title="خدمات ستلايت الكويت">
                                                 <h3>خدمات ستلايت الكويت</h3>
                                             </a>
                                         </li>
                                         <li class="widget-single-post-item">
-                                            <a href="{{route('tags.index')}}">
+                                            <a href="{{route('tags.index')}}" title="تجديد اشتراكات  IPTV">
                                                 <h3>تجديد اشتراكات  IPTV </h3>
                                             </a>
                                         </li>
@@ -82,7 +82,7 @@
                             <div class="tagcloud">
                                 @isset($tags)
                                     @foreach($tags as $tag)
-                                        <a href="{{ URL::route('tag.index',$tag -> slug) }}">{{ Str::limit($tag -> name, 10) }}</a>
+                                        <a href="{{ URL::route('tag.index',$tag -> slug) }}" title="{{$tag ->name}}">{{ Str::limit($tag -> name, 10) }}</a>
                                     @endforeach
                                 @endisset
                             </div>
@@ -92,20 +92,20 @@
                     <div class="tie-col-md-3 normal-side">
                         <div id="latest_tweets_widget-4" class="container-wrapper widget latest-tweets-widget">
                             <div class="widget-title the-global-title">
-                                <div class="the-subtitle"><a href="//twitter.com/tielabs" rel="nofollow noopener">تابعنا:</a><span class="widget-title-icon tie-icon"></span></div>
+                                <div class="the-subtitle">تابعنا:<span class="widget-title-icon tie-icon"></span></div>
                             </div>
                             <div class="widget-posts-list-wrapper">
                                 <div class="widget-posts-list-container timeline-widget">
                                     <ul class="posts-list-items widget-posts-wrapper">
 
                                         <li class="widget-single-post-item">
-                                            <a href="{{get_default_social_link_facebook()}}" rel="nofollow"><h3>فيس بوك</h3></a>
+                                            <a href="{{get_default_social_link_facebook()}}" rel="nofollow" title="فيس بوك"><h3>فيس بوك</h3></a>
                                         </li>
                                         <li class="widget-single-post-item">
-                                            <a href="{{get_default_social_link_instagram()}}" rel="nofollow"><h3> انستغرام</h3></a>
+                                            <a href="{{get_default_social_link_instagram()}}" rel="nofollow" title="انستغرام"><h3> انستغرام</h3></a>
                                         </li>
                                         <li class="widget-single-post-item">
-                                            <a href="{{get_default_social_link_twitter()}}" rel="nofollow"><h3>تويتر</h3></a>
+                                            <a href="{{get_default_social_link_twitter()}}" rel="nofollow" title="تويتر"><h3>تويتر</h3></a>
                                         </li>
 
                                     </ul>
@@ -122,7 +122,7 @@
         <div class="container">
             <div class="tie-row">
                 <div class="tie-col-md-12">
-                    <div class="copyright-text copyright-text-first">جميع الحقوق محفوظة {{ now()->year }} <a href="https://ibrahim.sadour.nl/ar" rel="nofollow" >تصميم إبراهيم صدور</a> </div>
+                    <div class="copyright-text copyright-text-first">جميع الحقوق محفوظة {{ now()->year }} <a href="https://ibrahim.sadour.nl/ar" title="إبراهيم صدور" rel="nofollow" >تصميم إبراهيم صدور</a> </div>
                     <div class="footer-menu">
                         <ul class="menu">
                             <li id="menu-item-2609" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-131 current_page_item menu-item-2609 tie-current-menu">
