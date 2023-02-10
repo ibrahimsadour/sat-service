@@ -17,7 +17,7 @@
                             <span class="author-meta single-author no-avatars">
                                 <span class="meta-item meta-author-wrapper meta-author-63">
                                     <span class="meta-author">
-                                        <span class="author-name tie-icon">{{$article ->car->name}}</span>
+                                        <span class="author-name tie-icon"></span>
                                     </span>
                                 </span>
                             </span>
