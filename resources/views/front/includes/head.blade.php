@@ -57,7 +57,8 @@
     <meta property="og:locale" content="ar_AR" />
     <meta property="og:type" content="website" />
     <meta name="robots" content="index, follow" />
-    <meta name="viewport" content="initial-scale=0.7,minimum-scale=1.0,maximum-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+
     <meta property="og:image:type" content="image/jpeg" />
     {{-- SEO seo_title  --}}
     @if (trim($__env->yieldContent('title')))
